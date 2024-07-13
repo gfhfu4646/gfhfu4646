@@ -1,0 +1,7 @@
+ 
+insert into CCVC_PriceList(PName,CCVC,Price,LogoUrl]) values('礼遇卡',24000,1900.00,'v1.jpg');
+insert into CCVC_PriceList(PName,CCVC,Price,LogoUrl]) values('金卡',56000,6900.00,'v2.jpg');
+insert into CCVC_PriceList(PName,CCVC,Price,LogoUrl]) values('白金卡',120000,15900.00,'v3.jpg');
+insert into CCVC_PriceList(PName,CCVC,Price,LogoUrl]) values('钻石卡',210000,18900.00,'v4.jpg');
+insert into CCVC_PriceList(PName,CCVC,Price,LogoUrl]) values('至尊卡',1000000,78900.00,'v5.jpg');
+ 
