@@ -1,0 +1,35 @@
+headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0',
+        'Cookie': 你的cookies
+    }
+ 
+    html = requests.post(url, headers=headers, json=data).json()
+    attractionList = html['attractionList']
+    for attraction in attractionList:
+        data = attraction['card']
+        commentCount = data['commentCount']
+        commentScore = data['commentScore']
+        coordinate = [data['coordinate']['latitude'], data['coordinate']['longitude']]
+        coverImageUrl = data.get('coverImageUrl','')
+        # 距离
+        distanceStr = data.get('distanceStr','')
+        # 地点
+        displayField = data.get('displayField', None)
+        heatScore = data.get('heatScore','')
+        # 景点名
+        poiName = data['poiName']
+        isFree = data['isFree']
+        if isFree:
+            price = 0
+            # 原价
+            marketPrice = 0
+        else:
+            price = data.get('price',0)
+            # 原价
+            marketPrice = data.get('marketPrice',0)
+        # 类别信息
+        sightCategoryInfo = data.get('sightCategoryInfo','')
+        # 标签
+        tagNameList = data.get('tagNameList','')
+        # 5a
+        sightLevelStr = data.get('sightLevelStr', None)
